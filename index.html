@@ -13,7 +13,7 @@
 			<p>(Hover to view)</p>
 		</div>
 		<section id="sot-map" class="map-container">
-			<div class="map">
+			<div class="map" id="map">
 				<svg
 					xmlns:dc="http://purl.org/dc/elements/1.1/"
 					xmlns:cc="http://creativecommons.org/ns#"
@@ -26,7 +26,7 @@
 					pretty_print="False"
 					version="1.1"
 					viewBox="0 0 1000 1001"
-					id="svg2"
+					id="svg-map"
 					inkscape:version="0.48.4 r9939"
 					sodipodi:docname="africa.svg">
 					>
@@ -398,6 +398,11 @@
 						<!-- Data will be dynamically added here -->
 					</tbody>
 				</table>
+			</div>
+
+			<div class="zoom-btns">
+				<button id="zoomIn">+</button>
+				<button id="zoomOut">-</button>
 			</div>
 		</section>
 

@@ -33,7 +33,7 @@ body {
 }
 
 #sot-map {
-  height: 86vh;
+  height: 87vh;
   width: 100%;
   max-height: 100vh;
   position: relative;
@@ -50,6 +50,7 @@ body {
   height: 100% !important;
   width: 100% !important;
   stroke: #fff;
+  transition: transform 0.3s ease;
 }
 #sot-map .map svg path {
   fill: #1295a9;
@@ -69,7 +70,7 @@ body {
   border: 1px solid #d0dddc;
   border-radius: 10px;
   z-index: 1000;
-  max-width: 48vw;
+  max-width: 50vw;
   white-space: wrap;
 }
 #sot-map #popup::after {
@@ -96,7 +97,8 @@ body {
 }
 #sot-map #popup table th,
 #sot-map #popup table td {
-  font-size: 14px;
+  font-size: 13.5px;
+  line-height: 18px;
   padding: 8px;
   color: #5b5959;
   text-align: left;

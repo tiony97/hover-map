@@ -1,3 +1,4 @@
+// INTERACTIVE MAP FUNCTIONALITY
 $(document).ready(function () {
 	var isHovered = false;
 
@@ -203,3 +204,5 @@ $(document).ready(function () {
 		$("#popup").css("display", "none");
 	});
 });
+
+// ZOOM FUNCTIONALITY
