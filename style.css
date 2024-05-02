@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.intro {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+}
+.intro h1 {
+  font-size: 30px;
+  color: #002147;
+  text-transform: capitalize;
+  text-align: center;
+}
+.intro p {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: wrap;
+  font-weight: 700;
+  color: #5b5959;
+  text-align: center;
+}
+
+#sot-map {
+  height: 86vh;
+  width: 100%;
+  max-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sot-map .map {
+  height: 100%;
+  width: 100%;
+}
+#sot-map .map svg {
+  height: 100% !important;
+  width: 100% !important;
+  stroke: #fff;
+}
+#sot-map .map svg path {
+  fill: #1295a9;
+  transition: all 0.3s ease-in;
+}
+#sot-map .map svg .active {
+  cursor: pointer;
+  fill: #002147 !important;
+}
+#sot-map .map svg .active:hover {
+  fill: #d0dddc !important;
+}
+#sot-map #popup {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #d0dddc;
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 48vw;
+  white-space: wrap;
+}
+#sot-map #popup::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+#sot-map #popup h2 {
+  font-size: 16px;
+  color: #002147;
+  text-transform: uppercase;
+  margin: 10px;
+}
+#sot-map #popup table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  vertical-align: top;
+}
+#sot-map #popup table th,
+#sot-map #popup table td {
+  font-size: 14px;
+  padding: 8px;
+  color: #5b5959;
+  text-align: left;
+  border-bottom: 1px solid #d0dddc;
+  vertical-align: top;
+}
+#sot-map #popup table th {
+  background-color: #d0dddc;
+  font-weight: bold;
+  white-space: nowrap;
+}
+#sot-map #popup table tr:nth-child(even) {
+  background-color: #d0dddc;
+}
+#sot-map #popup table tr:hover {
+  background-color: #d0dddc;
+}/*# sourceMappingURL=style.css.map */
