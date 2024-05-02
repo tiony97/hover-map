@@ -14,11 +14,11 @@ body {
 .intro {
   height: -moz-fit-content;
   height: fit-content;
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+  margin-bottom: 1em;
 }
 .intro h1 {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 700;
   color: #002147;
   text-transform: capitalize;
   text-align: center;
@@ -27,9 +27,12 @@ body {
   font-size: 14px;
   line-height: 20px;
   white-space: wrap;
-  font-weight: 700;
-  color: #5b5959;
+  font-weight: 400;
+  color: #002147;
   text-align: center;
+  text-transform: uppercase;
+  margin-top: 2em;
+  margin-bottom: 0.4em;
 }
 
 #sot-map {
@@ -72,6 +75,7 @@ body {
   z-index: 1000;
   max-width: 50vw;
   white-space: wrap;
+  padding: 10px;
 }
 #sot-map #popup::after {
   content: "";
@@ -84,10 +88,16 @@ body {
   border-color: transparent white transparent transparent;
 }
 #sot-map #popup h2 {
-  font-size: 16px;
+  font-size: 15px;
   color: #002147;
   text-transform: uppercase;
-  margin: 10px;
+  margin-bottom: 4px;
+}
+#sot-map #popup h3 {
+  font-size: 13px;
+  color: #002147;
+  text-transform: uppercase;
+  margin-bottom: 7px;
 }
 #sot-map #popup table {
   width: 100%;
@@ -102,7 +112,6 @@ body {
   padding: 8px;
   color: #5b5959;
   text-align: left;
-  border-bottom: 1px solid #d0dddc;
   vertical-align: top;
 }
 #sot-map #popup table th {

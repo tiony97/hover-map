@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 	// Array of country data
 	var countryData = {
-		Sudan: {
+		"South Sudan": {
 			details: [
 				{
 					Recipient: "World Bank & Ministry of General Education and Instruction (MoGEI)",
@@ -124,7 +124,10 @@ $(document).ready(function () {
 			var countryInfo = countryData[countryName].details;
 
 			// Set the title dynamically
-			$("#country-title").text(`${countryName} (${countryID})`);
+			$("#country-title").text(`${countryName},${countryID}`);
+
+			// Set the Project Count dynamically
+			$("#projects-count").text(`Projects: ${countryInfo.length}`);
 
 			// Loop through the data array
 			countryInfo.forEach(function (item) {
@@ -204,5 +207,3 @@ $(document).ready(function () {
 		$("#popup").css("display", "none");
 	});
 });
-
-// ZOOM FUNCTIONALITY
