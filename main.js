@@ -112,6 +112,17 @@ $(document).ready(function () {
 				},
 			],
 		},
+		Pakistan: {
+			details: [
+				{
+					Recipient: "World Bank",
+					Topic_Area: "Language of Instruction & Structured Pedagogy (All Sub-components)",
+					Description:
+						"Support different areas of the Gambia’s foundational learning reform, including language of instruction (policy development and language mapping to inform teacher deployment). Design of a new structured pedagogy program (i.e., scaling up the Effective Interventions FLN pilot). Provide a curriculum quality assurance review.",
+					TA_provider: "Partner Organization & External Consultants",
+				},
+			],
+		},
 		// Add data for other countries similarly
 	};
 
@@ -124,7 +135,49 @@ $(document).ready(function () {
 			var countryInfo = countryData[countryName].details;
 
 			// Set the title dynamically
-			$("#country-title").text(`${countryName},${countryID}`);
+			$("#country-title").text(`${countryName}, ${countryID}`);
+
+			// Set the Project Count dynamically
+			$("#projects-count").text(`Projects: ${countryInfo.length}`);
+
+			// Loop through the data array
+			countryInfo.forEach(function (item) {
+				// Create a new row
+				var row = $("<tr>");
+
+				// Append table data (columns) to the row
+				row.append($("<td>").text(item.Recipient));
+				row.append($("<td>").text(item.Topic_Area));
+				row.append($("<td>").text(item.Description));
+				row.append($("<td>").text(item.TA_provider));
+
+				// Append the row to the table body
+				$("#country-table tbody").append(row);
+			});
+
+			// Position the popup just next to the mouse icon
+			var mouseX = event.pageX;
+			var mouseY = event.pageY;
+			positionPopup(mouseX, mouseY);
+		},
+		function () {
+			isHovered = false;
+			// Clear table data
+			$("#country-table tbody").empty();
+			$("#popup").css("display", "none");
+		}
+	);
+
+	// Event listener for hover on elements with class "marker"
+	$("path.marker").hover(
+		function (event) {
+			isHovered = true;
+			var countryID = $(this).closest("a").find("path.active").attr("id");
+			var countryName = $(this).closest("a").find("path.active").data("name");
+			var countryInfo = countryData[countryName].details;
+
+			// Set the title dynamically
+			$("#country-title").text(`${countryName}, ${countryID}`);
 
 			// Set the Project Count dynamically
 			$("#projects-count").text(`Projects: ${countryInfo.length}`);
